@@ -1,14 +1,8 @@
 import styled from "@emotion/styled";
-import Header from "components/Header"
 
 export default function Wrapper({ children }) {
-    return (
-        <div>
-            <Header />
-            <Wrap>{children}</Wrap>
-        </div>
-      );
-    }
+  return <Wrap>{children}</Wrap>;
+}
 
 const Wrap = styled.div`
   display: flex;
