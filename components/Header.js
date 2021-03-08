@@ -1,11 +1,15 @@
 import styled from "@emotion/styled";
 import HeaderItem from "./HeaderItem";
 
+import Link from "next/link";
+
 export default function Header() {
   return (
     <HeaderElement>
       <HeaderStart>
+        <Link href="/">
         <Image src="/images/surfer.png" alt="surfer" />
+        </Link>
         <HeaderItems>
           <HeaderItem content="Docs" link="/docs" />
           <HeaderItem content="Blog" link="/blog" />
@@ -15,7 +19,7 @@ export default function Header() {
           />
         </HeaderItems>
       </HeaderStart>
-      <a href="https://github.com/surfcodes/surf">
+      <a href="https://github.com/surfcodes/surf" target="_blank">
         <Shields
           alt="GitHub Repo stars"
           src="https://img.shields.io/github/stars/surfcodes/surf?style=social"
