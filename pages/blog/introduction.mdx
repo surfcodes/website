@@ -1,0 +1,26 @@
+import Wrapper from "components/layout/LayoutWrapper";
+import Head from "next/head";
+
+export const meta = {
+  title:
+    "Introducing Github.surf Fastest and most elegant way to surf your code (CLI, Extension included)",
+  description: "Introduction Post",
+  icon: "🏄‍♂️",
+  slug: "/blog/introduction",
+};
+
+# 🏄‍♂️ Introducing Github.surf Fastest and most elegant way to surf your code (CLI, Extension included)
+
+![surf explaination](https://miro.medium.com/max/617/1*eV9HOl1q8aFsxa94F5Pn3w.png)
+
+## Spring is coming. A season for surfing.
+
+export default ({ children, meta: meta }) => (
+  <Wrapper>
+    <Head>
+      <title>{meta.title}</title>
+        <link rel="icon" href="/favicon.ico" />
+    </Head>
+    {children}
+  </Wrapper>
+);
