@@ -1,4 +1,4 @@
-import Wrapper from "components/layout/LayoutWrapper";
+import BlogPost from "components/layout/BlogPost";
 import Head from "next/head";
 
 export const meta = {
@@ -15,12 +15,16 @@ export const meta = {
 
 ## Spring is coming. A season for surfing.
 
+## What problem does “surf” solve?
+
+What do you do when you want to explore code on github? Or When you want to see the `master` / `main` branch code, other branch code on your local?
+
 export default ({ children, meta: meta }) => (
-  <Wrapper>
+  <BlogPost>
     <Head>
       <title>{meta.title}</title>
-        <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     {children}
-  </Wrapper>
+  </BlogPost>
 );
