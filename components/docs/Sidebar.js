@@ -4,7 +4,7 @@ export default function Sidebar({ children }) {
   return (
     <List>
       {children.map((item) => (
-        <ListItem>
+        <ListItem className="font-roboto">
           <a href={item.meta.slug} rel="prefetch">
             {item.meta.title}
           </a>
@@ -16,6 +16,8 @@ export default function Sidebar({ children }) {
 
 const List = styled.ul`
   list-style-type: none;
+
+  margin-right: 7vw;
 `;
 
 const ListItem = styled.li`
