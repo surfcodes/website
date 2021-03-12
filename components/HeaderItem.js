@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeaderItem(props) {
   return (
-    <HItem>
+    <HItem className="font-roboto">
       <Link href={props.link}>{props.content}</Link>
     </HItem>
   );

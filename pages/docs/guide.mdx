@@ -1,4 +1,4 @@
-import Documentation from "components/layout/Documentation";
+import DocumentationEntry from "components/layout/DocumentationEntry";
 import Head from "next/head";
 
 export const meta = {
@@ -36,9 +36,9 @@ But this does not mean the token is absolutely safe, **don't forget to clean it 
 
 As you see, running github.surf locally is not difficult. After cloning the repository, just run these commands:
 
-```shell
-$ yarn
-$ yarn watch # or yarn build, it may take minutes, wait please
+```bash
+yarn
+yarn watch # or yarn build, it may take minutes, wait please
 ```
 
 Then, there will be a new directory named `dist` generated in the project root. You can run `yarn serve` in another shell, and it will create a static file server for the `dist` directory.
@@ -80,11 +80,11 @@ Put simply, we build the necessary code and do a minify. The minify script is mo
 - `resources` - some resource files such as templates, pictures, configuration files, etc.
 
 export default ({ children, meta: meta }) => (
-  <Documentation>
+  <DocumentationEntry>
     <Head>
       <title>{meta.title}</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     {children}
-  </Documentation>
+  </DocumentationEntry>
 );

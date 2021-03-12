@@ -1,32 +1,54 @@
 import styled from "@emotion/styled";
+
 import { MDXProvider } from "@mdx-js/react";
 
+import Sidebar from "components/docs/Sidebar";
 import CodeBlock from "components/CodeBlock";
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+const docsItems = importAll(require.context("pages/docs", false, /.mdx$/));
 
 const components = {
   pre: (props) => <div {...props} />,
   code: CodeBlock,
 };
 
-export default function BlogPost({ children }) {
+
+export default function Documentation({ children }) {
   return (
-    <Wrap>
+    <Main>
+      <Sidebar>{docsItems}</Sidebar>
       <MDXProvider components={components}>
         <Wrap>{children}</Wrap>
       </MDXProvider>
-    </Wrap>
+    </Main>
   );
 }
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-left: 12vw;
+  width: 100%;
+
+  overflow: hidden;
+`;
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-
   --space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--space-y-reverse));
 
-  margin: 0 12vw;
+  margin-left: 5vw;
+  margin-right: 12vw;
+
+  width: 50%;
+
+  overflow: hidden;
 
   blockquote  {
     padding-left: 0.5rem;
@@ -39,9 +61,5 @@ const Wrap = styled.div`
 
     background-color: #e5e7eb;
     color: red;
-  }
-
-  p:has(> img) {
-    align-self: center;
   }
 `;
