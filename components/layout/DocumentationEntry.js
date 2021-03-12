@@ -15,15 +15,8 @@ const components = {
   code: CodeBlock,
 };
 
-const Style = ({ children }) => (
-  <style
-    dangerouslySetInnerHTML={{
-      __html: children,
-    }}
-  />
-);
 
-export default function Documentation({ children, prop }) {
+export default function Documentation({ children }) {
   return (
     <Main>
       <Sidebar>{docsItems}</Sidebar>
