@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styled from "@emotion/styled";
 
-import Sidebar from "components/docs/Sidebar";
 import Documentation from "components/layout/Documentation";
 
 function importAll(r) {
