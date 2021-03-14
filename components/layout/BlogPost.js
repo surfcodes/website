@@ -28,6 +28,10 @@ const Wrap = styled.div`
 
   margin: 0 12vw;
 
+  a {
+    text-decoration: underline;
+  }
+
   blockquote  {
     padding-left: 0.5rem;
     border-left: 2px solid #9ca3af;
@@ -35,13 +39,13 @@ const Wrap = styled.div`
 
   code {
     padding: 3px;
+    margin: 1px;
     border-radius: 2px;
 
     background-color: #e5e7eb;
     color: red;
-  }
 
-  p:has(> img) {
-    align-self: center;
+    font-family: FiraCode;
+    font-size: 0.8rem;
   }
 `;

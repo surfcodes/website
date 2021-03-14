@@ -15,7 +15,6 @@ const components = {
   code: CodeBlock,
 };
 
-
 export default function Documentation({ children }) {
   return (
     <Main>
@@ -50,6 +49,10 @@ const Wrap = styled.div`
 
   overflow: hidden;
 
+  a {
+    text-decoration: underline;
+  }
+
   blockquote  {
     padding-left: 0.5rem;
     border-left: 2px solid #9ca3af;
@@ -57,9 +60,13 @@ const Wrap = styled.div`
 
   code {
     padding: 3px;
+    margin: 1px;
     border-radius: 2px;
 
     background-color: #e5e7eb;
     color: red;
+
+    font-family: FiraCode;
+    font-size: 0.8rem;
   }
 `;

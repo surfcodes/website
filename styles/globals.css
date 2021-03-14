@@ -3,8 +3,17 @@
   src: url(/fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: FiraCode;
+  src: url(/fonts/FiraCode-Regular.ttf);
+}
+
 .font-roboto {
   font-family: Roboto;
+}
+
+.font-firacode {
+  font-family: FiraCode;
 }
 
 html,
