@@ -20,7 +20,9 @@ export default function Documentation({ children }) {
     <Main>
       <Sidebar>{docsItems}</Sidebar>
       <MDXProvider components={components}>
-        <Wrap>{children}</Wrap>
+        <Wrap>
+          <div>{children}</div>
+        </Wrap>
       </MDXProvider>
     </Main>
   );
@@ -30,14 +32,13 @@ const Main = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 12vw;
-  width: 100%;
-
-  overflow: hidden;
+  max-width: 100%;
 `;
 
 const Wrap = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+
   --space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--space-y-reverse));
@@ -45,9 +46,9 @@ const Wrap = styled.div`
   margin-left: 5vw;
   margin-right: 12vw;
 
-  width: 50%;
+  max-width: 60%;
 
-  overflow: hidden;
+  overflow: none;
 
   a {
     text-decoration: underline;
