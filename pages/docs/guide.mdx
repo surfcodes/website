@@ -20,7 +20,7 @@ According to the above, obviously, the core concept of githubsurf is to implemen
 
 github.surf is a purely static web app (because it really doesn't need a backend service, does it?). So we just deploy it on [GitHub Pages](https://pages.github.com/) now (the `gh-pages` branch of this repository), and it is free. The service of github.surf could be reliable (GitHub is very reliable) because nobody needs to pay the web hosting bills.
 
-# Rate Limit
+## Rate Limit
 
 Another thing that needs attention is [Rate Limit](https://docs.github.com/en/rest/reference/rate-limit):
 
@@ -32,7 +32,7 @@ So, if you meet some problems when you use github.surf, even if you are using ne
 
 But this does not mean the token is absolutely safe, **don't forget to clean it while you are using a device that doesn't belong to you**.
 
-# Development
+## Development
 
 As you see, running github.surf locally is not difficult. After cloning the repository, just run these commands:
 
@@ -45,7 +45,7 @@ Then, there will be a new directory named `dist` generated in the project root. 
 
 Now you can visit http://localhost:5000 in the browser. If you get a 404 error for some static files, please wait a minute for the building to complete.
 
-## Watch Mode
+### Watch Mode
 
 What happens after you run `yarn watch`?
 
@@ -65,11 +65,11 @@ Note that since we have modified the source code of VS Code, it may get into tro
 
 It is a little laborious to complete the watch process, but I didn't think of a better solution.
 
-## Build mode
+### Build mode
 
 Put simply, we build the necessary code and do a minify. The minify script is modified from [Code Server](https://github.com/cdr/code-server).
 
-## Directory Structure
+### Directory Structure
 
 - `extensions` - custom VS Code extensions that don't come with VS Code natively.
 

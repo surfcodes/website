@@ -15,13 +15,14 @@ const components = {
   code: CodeBlock,
 };
 
-
 export default function Documentation({ children }) {
   return (
     <Main>
       <Sidebar>{docsItems}</Sidebar>
       <MDXProvider components={components}>
-        <Wrap>{children}</Wrap>
+        <Wrap>
+          <div>{children}</div>
+        </Wrap>
       </MDXProvider>
     </Main>
   );
@@ -31,14 +32,13 @@ const Main = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 12vw;
-  width: 100%;
-
-  overflow: hidden;
+  max-width: 100%;
 `;
 
 const Wrap = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+
   --space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--space-y-reverse));
@@ -46,9 +46,13 @@ const Wrap = styled.div`
   margin-left: 5vw;
   margin-right: 12vw;
 
-  width: 50%;
+  max-width: 60%;
 
-  overflow: hidden;
+  overflow: none;
+
+  a {
+    text-decoration: underline;
+  }
 
   blockquote  {
     padding-left: 0.5rem;
@@ -57,9 +61,13 @@ const Wrap = styled.div`
 
   code {
     padding: 3px;
+    margin: 1px;
     border-radius: 2px;
 
     background-color: #e5e7eb;
     color: red;
+
+    font-family: FiraCode;
+    font-size: 0.8rem;
   }
 `;

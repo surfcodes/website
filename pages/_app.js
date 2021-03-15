@@ -1,13 +1,19 @@
 import "../styles/globals.css";
+import styled from "@emotion/styled";
+
 import Header from "components/Header";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <Page>
       <Header />
       <Component {...pageProps} />
-    </div>
+    </Page>
   );
 }
 
 export default MyApp;
+
+const Page = styled.div`
+  width: 100vw;
+`;

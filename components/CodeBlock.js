@@ -7,7 +7,7 @@ export default function CodeBlock({ children, className }) {
     <Highlight {...defaultProps} code={children} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={className}
+          className={className + " font-firacode"}
           style={{ ...style, padding: "20px", borderRadius: "5px" }}
         >
           {tokens.map((line, i) => (
