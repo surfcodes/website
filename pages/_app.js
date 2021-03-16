@@ -15,5 +15,5 @@ function MyApp({ Component, pageProps }) {
 export default MyApp;
 
 const Page = styled.div`
-  width: 100vw;
+  max-width: 100vw;
 `;

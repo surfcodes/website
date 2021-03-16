@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-
 import { MDXProvider } from "@mdx-js/react";
+import Head from "next/head";
 
 import Sidebar from "components/docs/Sidebar";
 import CodeBlock from "components/CodeBlock";
@@ -15,9 +15,12 @@ const components = {
   code: CodeBlock,
 };
 
-export default function Documentation({ children }) {
+export default function Documentation({ children, meta }) {
   return (
     <Main>
+      <Head>
+        <title>{meta.title}</title>
+      </Head>
       <Sidebar>{docsItems}</Sidebar>
       <MDXProvider components={components}>
         <Wrap>
@@ -49,6 +52,8 @@ const Wrap = styled.div`
   max-width: 60%;
 
   overflow: none;
+
+  line-height: 1.5;
 
   a {
     text-decoration: underline;

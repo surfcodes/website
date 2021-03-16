@@ -1,5 +1,4 @@
 import DocumentationEntry from "components/layout/DocumentationEntry";
-import Head from "next/head";
 
 export const meta = {
   title: "Guide",
@@ -80,11 +79,7 @@ Put simply, we build the necessary code and do a minify. The minify script is mo
 - `resources` - some resource files such as templates, pictures, configuration files, etc.
 
 export default ({ children, meta: meta }) => (
-  <DocumentationEntry>
-    <Head>
-      <title>{meta.title}</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+  <DocumentationEntry meta={meta}>
     {children}
   </DocumentationEntry>
 );

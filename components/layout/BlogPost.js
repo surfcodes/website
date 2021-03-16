@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { MDXProvider } from "@mdx-js/react";
+import Head from "next/head";
 
 import CodeBlock from "components/CodeBlock";
 
@@ -8,9 +9,12 @@ const components = {
   code: CodeBlock,
 };
 
-export default function BlogPost({ children }) {
+export default function BlogPost({ children, meta }) {
   return (
     <Wrap>
+      <Head>
+        <title>{meta.title}</title>
+      </Head>
       <MDXProvider components={components}>
         <Wrap>{children}</Wrap>
       </MDXProvider>
@@ -28,7 +32,9 @@ const Wrap = styled.div`
 
   margin: 0 12vw;
 
-  a {
+  line-height: 1.5;
+
+  a  {
     text-decoration: underline;
   }
 
