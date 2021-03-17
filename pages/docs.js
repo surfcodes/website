@@ -8,7 +8,6 @@ function importAll(r) {
 }
 
 const docsItems = importAll(require.context("./docs", false, /.mdx$/));
-console.log(docsItems);
 
 function Docs() {
   return (
@@ -18,6 +17,7 @@ function Docs() {
           <title>surf.codes - Docs</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        
         <h1>Docs</h1>
         {docsItems.map((item) => (
           <Entry>

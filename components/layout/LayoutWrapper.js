@@ -11,5 +11,5 @@ const Wrap = styled.div`
   margin-top: calc(1.25rem * calc(1 - var(--space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--space-y-reverse));
 
-  margin: 0 12vw;
+  margin: 0 10vw;
 `;

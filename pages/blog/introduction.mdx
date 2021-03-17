@@ -1,10 +1,9 @@
 import BlogPost from "components/layout/BlogPost";
-import Head from "next/head";
 
 export const meta = {
   title:
-    "Introducing Github.surf - Fastest and most elegant way to surf your code (CLI, Extension included)",
-  description: "Introduction Post",
+    "Introducing Github.surf",
+  description: "Introducing the fastest and most elegant way to surf code.",
   icon: "🏄‍♂️",
   slug: "/blog/introduction",
 };
@@ -15,16 +14,39 @@ export const meta = {
 
 ## Spring is coming. A season for surfing.
 
+![surfer](https://miro.medium.com/max/210/1*w1ScZJ50IAIKqsviODsdhw.png)
+
 ## What problem does “surf” solve?
 
 What do you do when you want to explore code on github? Or When you want to see the `master` / `main` branch code, other branch code on your local?
 
+We goto github, select branch, and view in the default code view provided by github. We do this because this is the most fastest way to view your desired code on separate workspace so your work can stay on local branch and unsaved changes to remain.
+
+But this is quite annoying. This is why we made [github.surf](https://github.surf/) (inspired by github1s)
+
+Surf for the rescue! On these occasions, you can run `surf . -b other-branch` on your local repository to start surfing on other branch than local's (on browser based vscode) (More details below at CLI section)
+
+### Which, including...
+- ✅ Github support — Surf GitHub repository on browser with vscode environment
+- ✅ Official Chrome extension — Launch surf with extension button
+- ✅ Official CLI — surf . command for opening surf on terminal
+- Gitlab support (gitlab.surf) (available next week)
+- Bitbucket support (bitbucket.surf) (available next week)
+- surf.codes for private, custom scm (available next week)
+- Remote compile & terminal support in browser (comming soon)
+
+Basically **VSCode on browser** environment. Always accessible, Always stays in your current interest.
+
+Quick demo → Visit github.surf
+
+&hellip;
+
+## Simple usage
+To open up your code on surf, simply change `.com` to `.surf` at the url of your repository. This also works for gitlab and bitbucket. (gitlab.surf, bitbucket.surf) 
+
+
 export default ({ children, meta: meta }) => (
-  <BlogPost>
-    <Head>
-      <title>{meta.title}</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+  <BlogPost meta={meta}>
     {children}
   </BlogPost>
 );

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styled from "@emotion/styled";
 
 import Wrapper from "components/layout/LayoutWrapper";
@@ -20,21 +21,43 @@ export default function Home() {
           Start now
         </StartButton>
       </Banner>
-      <br></br>
-      <Content></Content>
+      <br />
+      <Content>
+        <PreviewImage src="/images/preview/surf-ui.png" />
+        <Description>
+          <DescriptionTitle>
+            Surf your codes, Faster then ever.
+          </DescriptionTitle>
+          <DescriptionContent>
+            Surf for the rescue! On these occasions, you can run surf . -b
+            other-branch on your local repository to start surfing on other
+            branch than local's (on browser based vscode) (More details{" "}
+            <u>
+              <Link href="/blog/introduction">here</Link>
+            </u>
+            &nbsp;)
+          </DescriptionContent>
+        </Description>
+        <PreviewImage src="/images/preview/extension-button.png" />
+      </Content>
     </Wrapper>
   );
 }
 
 const Content = styled.div`
-  display: block;
-  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 4vw;
+
+  overflow: none;
+  max-width: 100vw;
 `;
 
 const Banner = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center
+  align-items: center;
   padding: 0.5rem;
   text-align: center;
 
@@ -43,6 +66,7 @@ const Banner = styled.div`
 
 const BannerTitle = styled.h1`
   font-size: 3.5rem;
+  font-family: Helvetica Neue;
   --padding-x: 3vw;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
@@ -50,6 +74,7 @@ const BannerTitle = styled.h1`
 
 const BannerSubtitle = styled.div`
   font-size: 1.3rem;
+  font-family: Helvetica Neue;
   color: #444545;
 
   --padding-x: 25vw;
@@ -57,7 +82,40 @@ const BannerSubtitle = styled.div`
   padding-right: var(--padding-x);
 `;
 
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 40vw;
+  margin: 2vh 9vw;
+`;
+
+const DescriptionTitle = styled.h2`
+  font-size: 2.5rem;
+  font-family: Helvetica Neue;
+  --padding-x: 3vw;
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+`;
+
+const DescriptionContent = styled.div`
+  font-size: 1.3rem;
+  font-family: Helvetica Neue;
+  color: #444545;
+
+  --padding-x: 3vw;
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+`;
+
+const PreviewImage = styled.img`
+  margin: 2vh 10vw;
+  border-radius: 1rem;
+`;
+
 const StartButton = styled.a`
+  font-size: 1.25rem;
+  font-family: Helvetica Neue;
   color: #fff;
   background: #2562ff;
 
@@ -72,7 +130,7 @@ const StartButton = styled.a`
   padding: 2vh 4vw;
   margin-top: 3vh;
 
-  --margin-x: 31vw;
+  --margin-x: auto;
   margin-left: var(--margin-x);
   margin-right: var(--margin-x);
 
