@@ -8,7 +8,7 @@ export default function Header() {
     <HeaderElement>
       <HeaderStart>
         <Link href="/">
-        <Image src="/images/surfer.png" alt="surfer" />
+          <Image src="/images/surfer.png" alt="surfer" />
         </Link>
         <HeaderItems>
           <HeaderItem content="Docs" link="/docs" />
@@ -30,12 +30,16 @@ export default function Header() {
 }
 
 const HeaderElement = styled.header`
+  @media (max-width: 1022px) {
+    display: none;
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100;
   margin-bottom: 3rem;
-  
+
   --margin-x: 7vw;
   margin-left: var(--margin-x);
   margin-right: var(--margin-x);
