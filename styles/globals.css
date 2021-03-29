@@ -34,3 +34,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+nav.open {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 0.6rem;
+
+  --margin-x: 0.5rem;
+  margin-left: var(--margin-x);
+  margin-right: var(--margin-x);
+
+  --padding-x: 2rem;
+  padding-left: var(--padding-x);
+  padding-right: var(--padding-x);
+
+  padding-bottom: 2rem;
+
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
