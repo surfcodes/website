@@ -43,14 +43,14 @@ export default function MobileHeader() {
         </Link>
       </HeaderElement>
       <Menu className={showMenu ? "open" : null}>
-        <MenuItem>
+        <MenuItem onClick={() => setshowMenu(!showMenu)}>
           <Link href="/">Home</Link>
         </MenuItem>
-        <MenuItem>
-          <Link href="docs">Docs</Link>
+        <MenuItem onClick={() => setshowMenu(!showMenu)}>
+          <Link href="/docs">Docs</Link>
         </MenuItem>
-        <MenuItem>
-          <Link href="blog">Blog</Link>
+        <MenuItem onClick={() => setshowMenu(!showMenu)}>
+          <Link href="/blog">Blog</Link>
         </MenuItem>
       </Menu>
     </Wrapper>
@@ -110,6 +110,8 @@ const MenuButton = styled.button`
 const MenuItem = styled.span`
   padding: 0.8rem;
   margin: 0.2rem 0;
+
+  font-size: 1.4rem;
 
   border-radius: 0.5rem;
 

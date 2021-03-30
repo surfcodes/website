@@ -21,6 +21,11 @@ const Main = styled.div`
   flex-direction: row;
   margin-left: 12vw;
   width: 100%;
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+    max-width: 100vw;
+  }
 `;
 
 const Wrap = styled.div`
@@ -34,4 +39,10 @@ const Wrap = styled.div`
   margin-right: 12vw;
 
   width: 100%;
+
+  @media (max-width: 380px) {
+    margin-left: 2vw;
+    margin-right: 6vw;
+    width: 70%;
+  }
 `;

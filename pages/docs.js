@@ -41,6 +41,10 @@ const Main = styled.div`
   flex-direction: row;
 
   width: 100%;
+
+  @media (max-width: 380px) {
+    display: flex;
+  }
 `;
 
 const Entry = styled.div`

@@ -51,6 +51,10 @@ const Content = styled.div`
 
   overflow: none;
   max-width: 100vw;
+
+  @media (max-width: 380px) {
+    padding: 1vh 2vw;
+  }
 `;
 
 const Banner = styled.div`
@@ -70,6 +74,10 @@ const BannerTitle = styled.h1`
   --padding-x: 3vw;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
+
+  @media (max-width: 380px) {
+    --padding-x: 1.5vw;
+  }
 `;
 
 const BannerSubtitle = styled.div`
@@ -80,6 +88,10 @@ const BannerSubtitle = styled.div`
   --padding-x: 25vw;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
+
+  @media (max-width: 380px) {
+    --padding-x: 10vw;
+  }
 `;
 
 const Description = styled.div`
@@ -88,6 +100,11 @@ const Description = styled.div`
   justify-content: start;
   width: 40vw;
   margin: 2vh 9vw;
+
+  @media (max-width: 380px) {
+    margin: 1vh 4vw;
+    width: 60vw;
+  }
 `;
 
 const DescriptionTitle = styled.h2`
@@ -96,6 +113,10 @@ const DescriptionTitle = styled.h2`
   --padding-x: 3vw;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
+
+  @media (max-width: 380px) {
+    --padding-x: 1vw;
+  }
 `;
 
 const DescriptionContent = styled.div`
@@ -106,11 +127,19 @@ const DescriptionContent = styled.div`
   --padding-x: 3vw;
   padding-left: var(--padding-x);
   padding-right: var(--padding-x);
+
+  @media (max-width: 380px) {
+    --padding-x: 1vw;
+  }
 `;
 
 const PreviewImage = styled.img`
   margin: 2vh 10vw;
   border-radius: 1rem;
+
+  @media (max-width: 380px) {
+    margin: 1vh 5vw;
+  }
 `;
 
 const StartButton = styled.a`

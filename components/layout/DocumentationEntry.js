@@ -36,11 +36,18 @@ const Main = styled.div`
   flex-direction: row;
   margin-left: 12vw;
   max-width: 100%;
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+    max-width: 100vw;
+
+    margin-left: 6vw;
+  }
 `;
 
 const Wrap = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
 
   --space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--space-y-reverse)));
@@ -65,14 +72,29 @@ const Wrap = styled.div`
   }
 
   code {
-    padding: 3px;
-    margin: 1px;
+    padding: 1px;
     border-radius: 2px;
 
-    background-color: #e5e7eb;
-    color: red;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 10px;
+  }
 
-    font-family: FiraCode;
-    font-size: 0.8rem;
+  code:before {
+    content: "\`";
+  }
+
+  code:after {
+    content: "\`";
+  }
+
+  @media (max-width: 380px) {
+    display: block;
+    overflow: hidden;
+    max-width: 80vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    justify-content: safe;
   }
 `;
