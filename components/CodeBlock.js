@@ -8,7 +8,7 @@ export default function CodeBlock({ children, className }) {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={className + " font-firacode"}
-          style={{ ...style, padding: "20px", borderRadius: "5px" }}
+          style={{ ...style, padding: "1.2rem", borderRadius: "5px" }}
         >
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
