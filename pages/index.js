@@ -55,6 +55,9 @@ const Content = styled.div`
   @media (max-width: 380px) {
     padding: 1vh 2vw;
   }
+  @media (max-width: 1024px) {
+    padding: 1vh 3vw;
+  }
 `;
 
 const Banner = styled.div`
@@ -78,6 +81,10 @@ const BannerTitle = styled.h1`
   @media (max-width: 380px) {
     --padding-x: 1.5vw;
   }
+
+  @media (max-width: 1024px) {
+    --padding-x: 2vw;
+  }
 `;
 
 const BannerSubtitle = styled.div`
@@ -92,6 +99,10 @@ const BannerSubtitle = styled.div`
   @media (max-width: 380px) {
     --padding-x: 10vw;
   }
+
+  @media (max-width: 1024px) {
+    --padding-x: 13vw;
+  }
 `;
 
 const Description = styled.div`
@@ -105,6 +116,11 @@ const Description = styled.div`
     margin: 1vh 4vw;
     width: 60vw;
   }
+
+  @media (max-width: 1024px) {
+    margin: 1.5vh 7vw;
+    width: 50vw;
+  }
 `;
 
 const DescriptionTitle = styled.h2`
@@ -116,6 +132,9 @@ const DescriptionTitle = styled.h2`
 
   @media (max-width: 380px) {
     --padding-x: 1vw;
+  }
+  @media (max-width: 1024px) {
+    --padding-x: 2vw;
   }
 `;
 
@@ -131,6 +150,9 @@ const DescriptionContent = styled.div`
   @media (max-width: 380px) {
     --padding-x: 1vw;
   }
+  @media (max-width: 1024px) {
+    --padding-x: 2vw;
+  }
 `;
 
 const PreviewImage = styled.img`
@@ -139,6 +161,9 @@ const PreviewImage = styled.img`
 
   @media (max-width: 380px) {
     margin: 1vh 5vw;
+  }
+  @media (max-width: 1024px) {
+    margin: 1.5vh 7vw;
   }
 `;
 
