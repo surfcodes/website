@@ -12,4 +12,8 @@ const Wrap = styled.div`
   margin-bottom: calc(1.25rem * var(--space-y-reverse));
 
   margin: 0 10vw;
+
+  @media (max-width: 1024px) {
+    margin: 0 7vw;
+  }
 `;
